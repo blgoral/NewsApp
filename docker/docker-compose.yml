@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  dotnet:
+    build:
+      dockerfile: NewsAppApi/Dockerfile
+    environment:
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/servercert.pfx
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://dev.local:443
+    ports:
+      - "4444:443"
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:8.0.33
+    ports:
+      - "3333:3306"
+    env_file:
+      - ./env/mysql.env

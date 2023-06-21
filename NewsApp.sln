@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsAppLibrary", "NewsAppLibrary\NewsAppLibrary.csproj", "{0650EB03-837D-49FB-A2E5-E708577F9CA4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{A2E45B96-26E3-49C6-870A-498EE68B8E78}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsAppApi", "NewsAppApi\NewsAppApi.csproj", "{6DBF2986-A311-4ABF-AAD9-C8F52EC5851B}"
 EndProject
 Global

@@ -3,6 +3,9 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
+COPY ["NewsAppApi/Certs/servercert.pfx", "/https/servercert.pfx"]
+RUN update-ca-certificates
+
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["NewsAppApi/NewsAppApi.csproj", "NewsAppApi/"]
